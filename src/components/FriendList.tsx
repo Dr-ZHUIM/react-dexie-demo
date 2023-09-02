@@ -1,5 +1,6 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/db';
+import FriendItem from './FriendItem';
 
 type QueryFilter = {
   minAge: number;
@@ -16,11 +17,9 @@ export function FriendList({ maxAge, minAge }: QueryFilter) {
   }, [minAge, maxAge]);
 
   return (
-    <ul>
+    <ul className="flex-col gap-[20px] w-full">
       {friends?.map((friend) => (
-        <li key={friend.id}>
-          {friend.name}, {friend.age}
-        </li>
+        <FriendItem key={friend.id} data={{ ...friend }} />
       ))}
     </ul>
   );

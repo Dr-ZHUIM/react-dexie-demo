@@ -1,0 +1,33 @@
+.btn{
+  display: block;
+  min-width: 60px;
+  height: 30px;
+  padding: 0;
+  padding-inline: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.btn-success{
+  color: #fff;
+  background-color: #27ae60;
+  &:hover{
+    background-color: #2ecc71;
+  }
+}
+
+.btn-primary{
+  color: #fff;
+  background-color: #2980b9;
+  &:hover{
+    background-color: #3498db;
+  }
+}
+
+.btn-danger{
+  color: #fff;
+  background-color: #c0392b;
+  &:hover{
+    background-color: #e74c3c;
+  }
+}
